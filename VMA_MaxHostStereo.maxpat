@@ -7,7 +7,7 @@
 			"revision" : 5
 		}
 ,
-		"rect" : [ 0.0, 44.0, 310.0, 394.0 ],
+		"rect" : [ 0.0, 44.0, 306.0, 393.0 ],
 		"bgcolor" : [ 0.886364, 1.0, 1.0, 0.5 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -28,6 +28,19 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-33",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 461.0, 418.0, 20.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 123.5, 26.5, 20.0, 20.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"bgcolor" : [ 0.001809, 0.736468, 0.151554, 1.0 ],
 					"bgoncolor" : [ 0.156863, 0.662745, 0.862745, 1.0 ],
@@ -172,13 +185,13 @@
 					"patching_rect" : [ 206.5, 98.0, 126.0, 21.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 154.0, 49.5, 136.0, 21.0 ],
-					"text" : "144 60 0"
+					"text" : "176 92 1"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 1.0, 0.0, 0.0, 1.0 ],
+					"bgcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
 					"id" : "obj-6",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -215,8 +228,8 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 302.0, 47.0, 150.0, 23.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 153.0, 26.5, 147.0, 23.0 ],
-					"text" : "All received MIDIinput"
+					"presentation_rect" : [ 153.0, 26.5, 152.0, 23.0 ],
+					"text" : "internal: r MIDIinput"
 				}
 
 			}
@@ -230,7 +243,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 177.5, 162.0, 135.0, 21.0 ],
-					"text" : "midievent 144 60 0"
+					"text" : "midievent 176 92 1"
 				}
 
 			}
@@ -302,8 +315,8 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 492.5, 480.0, 156.0, 23.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 15.0, 26.5, 141.0, 23.0 ],
-					"text" : "select external MIDI"
+					"presentation_rect" : [ 15.0, 26.5, 108.0, 23.0 ],
+					"text" : "external MIDI in"
 				}
 
 			}
@@ -316,7 +329,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 425.0, 481.0, 55.0, 21.0 ],
+					"patching_rect" : [ 425.0, 480.0, 55.0, 21.0 ],
 					"text" : "midiinfo"
 				}
 
@@ -326,7 +339,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-22",
-					"items" : [ "Oxygen 49", ",", "Logidy UMI3", ",", "to Max 1", ",", "to Max 2" ],
+					"items" : [ "Logidy UMI3", ",", "to Max 1", ",", "to Max 2", ",", "Oxygen 49" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -347,7 +360,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 461.0, 453.0, 77.0, 21.0 ],
+					"patching_rect" : [ 461.0, 447.0, 77.0, 21.0 ],
 					"text" : "loadmess 0"
 				}
 
@@ -566,7 +579,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 432.0, 140.0, 21.0 ],
-									"text" : "144 31 0"
+									"text" : "176 92 1"
 								}
 
 							}
@@ -963,16 +976,16 @@
 ,
 					"patching_rect" : [ 425.0, 549.0, 121.0, 23.0 ],
 					"saved_object_attributes" : 					{
-						"fontface" : 0,
-						"fontsize" : 14.0,
+						"default_fontname" : "Arial",
+						"default_fontsize" : 14.0,
+						"description" : "",
+						"fontname" : "Arial",
 						"tags" : "",
 						"globalpatchername" : "",
+						"fontface" : 0,
+						"fontsize" : 14.0,
 						"default_fontface" : 0,
-						"digest" : "",
-						"default_fontname" : "Arial",
-						"fontname" : "Arial",
-						"default_fontsize" : 14.0,
-						"description" : ""
+						"digest" : ""
 					}
 ,
 					"text" : "p externMIDIinput"
@@ -1210,16 +1223,16 @@
 ,
 					"patching_rect" : [ 423.0, 277.0, 147.0, 23.0 ],
 					"saved_object_attributes" : 					{
-						"fontface" : 0,
-						"fontsize" : 14.0,
+						"default_fontname" : "Arial",
+						"default_fontsize" : 14.0,
+						"description" : "",
+						"fontname" : "Arial",
 						"tags" : "",
 						"globalpatchername" : "",
+						"fontface" : 0,
+						"fontsize" : 14.0,
 						"default_fontface" : 0,
-						"digest" : "",
-						"default_fontname" : "Arial",
-						"fontname" : "Arial",
-						"default_fontsize" : 14.0,
-						"description" : ""
+						"digest" : ""
 					}
 ,
 					"text" : "p info.outputChannels"
@@ -1328,10 +1341,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 220.0, 320.0, 42.0, 23.0 ],
-									"saved_object_attributes" : 									{
-										"attr_comment" : ""
-									}
-,
 									"text" : "out 1"
 								}
 
@@ -1563,16 +1572,16 @@
 ,
 					"patching_rect" : [ 109.0, 635.0, 49.0, 23.0 ],
 					"saved_object_attributes" : 					{
-						"fontface" : 0,
-						"fontsize" : 14.0,
+						"default_fontname" : "Arial",
+						"default_fontsize" : 14.0,
+						"description" : "",
+						"fontname" : "Arial",
 						"tags" : "",
 						"globalpatchername" : "",
+						"fontface" : 0,
+						"fontsize" : 14.0,
 						"default_fontface" : 0,
-						"digest" : "",
-						"default_fontname" : "Arial",
-						"fontname" : "Arial",
-						"default_fontsize" : 14.0,
-						"description" : ""
+						"digest" : ""
 					}
 ,
 					"text" : "p 1"
@@ -1581,7 +1590,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 1.0, 0.0, 0.0, 1.0 ],
+					"bgcolor" : [ 0.0, 1.0, 0.0, 1.0 ],
 					"id" : "obj-7",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -1828,6 +1837,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-32", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-17", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-33", 0 ]
 				}
 
 			}
