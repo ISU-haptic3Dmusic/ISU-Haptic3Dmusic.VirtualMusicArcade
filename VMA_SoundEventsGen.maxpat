@@ -28,6 +28,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"checkedcolor" : [ 0.0, 0.452009, 0.17319, 1.0 ],
 					"id" : "obj-191",
 					"maxclass" : "toggle",
 					"numinlets" : 1,
@@ -50,25 +51,6 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 79.45076, 436.0, 144.0, 23.0 ],
 					"text" : "pvar metroT1-1toggle"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bgcolor" : [ 0.99981, 0.933465, 0.955579, 0.5 ],
-					"bgcolor2" : [ 0.835381, 0.766231, 0.866667, 1.0 ],
-					"fontname" : "Arial",
-					"fontsize" : 14.0,
-					"gradient" : 1,
-					"id" : "obj-186",
-					"linecount" : 2,
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 192.428055, 498.5, 129.0, 37.0 ],
-					"presentation_rect" : [ 195.227295, 499.772705, 0.0, 0.0 ],
-					"text" : ";\rMIDIinput $1 $2 $3"
 				}
 
 			}
@@ -152,7 +134,6 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -2198,7 +2179,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 822.227295, 981.772705, 95.0, 21.0 ],
-					"text" : "144 51 60"
+					"text" : "144 27 60"
 				}
 
 			}
@@ -2265,7 +2246,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 898.227295, 927.772705, 95.0, 21.0 ],
-					"text" : "128 51 60"
+					"text" : "128 27 60"
 				}
 
 			}
