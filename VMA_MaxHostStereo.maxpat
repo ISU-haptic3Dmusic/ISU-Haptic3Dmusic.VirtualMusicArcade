@@ -339,7 +339,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-22",
-					"items" : [ "Logidy UMI3", ",", "to Max 1", ",", "to Max 2", ",", "Oxygen 49" ],
+					"items" : [ "Oxygen 49", ",", "Logidy UMI3", ",", "to Max 1", ",", "to Max 2" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -977,10 +977,10 @@
 					"patching_rect" : [ 425.0, 549.0, 121.0, 23.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontname" : "Arial",
-						"default_fontsize" : 14.0,
-						"description" : "",
 						"fontname" : "Arial",
 						"tags" : "",
+						"default_fontsize" : 14.0,
+						"description" : "",
 						"globalpatchername" : "",
 						"fontface" : 0,
 						"fontsize" : 14.0,
@@ -1047,7 +1047,8 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 255.0, 607.5, 50.0, 23.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 188.0, 255.5, 38.0, 23.0 ]
+					"presentation_rect" : [ 188.0, 255.5, 38.0, 23.0 ],
+					"triangle" : 0
 				}
 
 			}
@@ -1063,7 +1064,8 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 305.0, 607.5, 50.0, 23.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 232.0, 255.5, 38.0, 23.0 ]
+					"presentation_rect" : [ 232.0, 255.5, 38.0, 23.0 ],
+					"triangle" : 0
 				}
 
 			}
@@ -1224,10 +1226,10 @@
 					"patching_rect" : [ 423.0, 277.0, 147.0, 23.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontname" : "Arial",
-						"default_fontsize" : 14.0,
-						"description" : "",
 						"fontname" : "Arial",
 						"tags" : "",
+						"default_fontsize" : 14.0,
+						"description" : "",
 						"globalpatchername" : "",
 						"fontface" : 0,
 						"fontsize" : 14.0,
@@ -1341,6 +1343,10 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 220.0, 320.0, 42.0, 23.0 ],
+									"saved_object_attributes" : 									{
+										"attr_comment" : ""
+									}
+,
 									"text" : "out 1"
 								}
 
@@ -1573,10 +1579,10 @@
 					"patching_rect" : [ 109.0, 635.0, 49.0, 23.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontname" : "Arial",
-						"default_fontsize" : 14.0,
-						"description" : "",
 						"fontname" : "Arial",
 						"tags" : "",
+						"default_fontsize" : 14.0,
+						"description" : "",
 						"globalpatchername" : "",
 						"fontface" : 0,
 						"fontsize" : 14.0,
