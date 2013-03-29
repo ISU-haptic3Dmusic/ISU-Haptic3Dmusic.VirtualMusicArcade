@@ -7,7 +7,7 @@
 			"revision" : 5
 		}
 ,
-		"rect" : [ 0.0, 44.0, 306.0, 393.0 ],
+		"rect" : [ 0.0, 44.0, 330.0, 404.0 ],
 		"bgcolor" : [ 0.886364, 1.0, 1.0, 0.5 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -185,7 +185,7 @@
 					"patching_rect" : [ 206.5, 98.0, 126.0, 21.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 154.0, 49.5, 136.0, 21.0 ],
-					"text" : "176 92 1"
+					"text" : "176 0 0"
 				}
 
 			}
@@ -243,7 +243,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 177.5, 162.0, 135.0, 21.0 ],
-					"text" : "midievent 176 92 1"
+					"text" : "midievent 176 0 0"
 				}
 
 			}
@@ -271,8 +271,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 156.5, 33.0, 108.0, 23.0 ],
-					"text" : "r HostAutoInput"
+					"patching_rect" : [ 156.5, 33.0, 91.0, 23.0 ],
+					"text" : "r VSTin.VMA"
 				}
 
 			}
@@ -286,8 +286,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 177.5, 63.0, 79.0, 23.0 ],
-					"text" : "r MIDIinput"
+					"patching_rect" : [ 177.5, 63.0, 121.0, 23.0 ],
+					"text" : "r VSTMIDIin.VMA"
 				}
 
 			}
@@ -300,8 +300,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 425.0, 582.0, 81.0, 23.0 ],
-					"text" : "s MIDIinput"
+					"patching_rect" : [ 425.0, 582.0, 123.0, 23.0 ],
+					"text" : "s VSTMIDIin.VMA"
 				}
 
 			}
@@ -579,7 +579,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 432.0, 140.0, 21.0 ],
-									"text" : "176 92 1"
+									"text" : "144 66 55"
 								}
 
 							}
@@ -976,16 +976,16 @@
 ,
 					"patching_rect" : [ 425.0, 549.0, 121.0, 23.0 ],
 					"saved_object_attributes" : 					{
+						"default_fontface" : 0,
+						"digest" : "",
 						"default_fontname" : "Arial",
 						"fontname" : "Arial",
-						"tags" : "",
 						"default_fontsize" : 14.0,
+						"tags" : "",
 						"description" : "",
 						"globalpatchername" : "",
 						"fontface" : 0,
-						"fontsize" : 14.0,
-						"default_fontface" : 0,
-						"digest" : ""
+						"fontsize" : 14.0
 					}
 ,
 					"text" : "p externMIDIinput"
@@ -1152,8 +1152,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 289.642853, 353.0, 98.0, 23.0 ],
-					"text" : "s VSTMIDIout"
+					"patching_rect" : [ 289.642853, 353.0, 132.0, 23.0 ],
+					"text" : "s VSTMIDIout.VMA"
 				}
 
 			}
@@ -1225,16 +1225,16 @@
 ,
 					"patching_rect" : [ 423.0, 277.0, 147.0, 23.0 ],
 					"saved_object_attributes" : 					{
+						"default_fontface" : 0,
+						"digest" : "",
 						"default_fontname" : "Arial",
 						"fontname" : "Arial",
-						"tags" : "",
 						"default_fontsize" : 14.0,
+						"tags" : "",
 						"description" : "",
 						"globalpatchername" : "",
 						"fontface" : 0,
-						"fontsize" : 14.0,
-						"default_fontface" : 0,
-						"digest" : ""
+						"fontsize" : 14.0
 					}
 ,
 					"text" : "p info.outputChannels"
@@ -1343,10 +1343,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 220.0, 320.0, 42.0, 23.0 ],
-									"saved_object_attributes" : 									{
-										"attr_comment" : ""
-									}
-,
 									"text" : "out 1"
 								}
 
@@ -1578,16 +1574,16 @@
 ,
 					"patching_rect" : [ 109.0, 635.0, 49.0, 23.0 ],
 					"saved_object_attributes" : 					{
+						"default_fontface" : 0,
+						"digest" : "",
 						"default_fontname" : "Arial",
 						"fontname" : "Arial",
-						"tags" : "",
 						"default_fontsize" : 14.0,
+						"tags" : "",
 						"description" : "",
 						"globalpatchername" : "",
 						"fontface" : 0,
-						"fontsize" : 14.0,
-						"default_fontface" : 0,
-						"digest" : ""
+						"fontsize" : 14.0
 					}
 ,
 					"text" : "p 1"
