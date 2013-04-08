@@ -7,7 +7,7 @@
 			"revision" : 5
 		}
 ,
-		"rect" : [ 1.0, 45.0, 321.0, 394.0 ],
+		"rect" : [ 2.0, 45.0, 321.0, 394.0 ],
 		"bgcolor" : [ 0.886364, 1.0, 1.0, 0.5 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
