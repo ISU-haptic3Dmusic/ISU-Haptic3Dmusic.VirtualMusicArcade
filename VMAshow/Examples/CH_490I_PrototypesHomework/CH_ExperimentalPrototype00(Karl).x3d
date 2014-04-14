@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<X3D profile='Immersive' version='3.2'>
+<Scene>
+
+    <ProtoDeclare name='ExampleProto'>
+      <ProtoInterface>
+        <field name='radius' type='SFFloat' accessType='initializeOnly' value='1.0'/>
+      </ProtoInterface>
+      <ProtoBody>
+        <Shape>
+          	<Appearance>
+            	<Material diffuseColor='1 0 0'/>
+          	</Appearance>
+          	<Sphere>
+            	<IS>
+              	<connect nodeField='radius' protoField='radius'/>
+				</IS>
+			</Sphere>
+        </Shape>
+      </ProtoBody>
+    </ProtoDeclare>
+
+	<ProtoInstance name='ExampleProto'>
+		<fieldValue name='radius' value='0.5'/>
+	</ProtoInstance>
+	    
+</Scene>
+</X3D>

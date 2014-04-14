@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<X3D profile='Immersive' version='3.2'>
+    <Scene>
+        <IMPORT inlineDEF='VESC_EXPORTS' exportedDEF='WORKING_VOLUME' AS='wv'/>
+    	<IMPORT inlineDEF='H3D_EXPORTS' exportedDEF='HDEV' AS='hdev'/>
+		
+        <Transform translation='0. 0.02 0.'> <!-- nothing in this transform -->
+        <ExternProtoDeclare name='ProtoTri_CH' url='ProtoTri_CH.x3d#ProtoTri'>
+            <field name='normalizedProjections' type='SFVec3f' accessType='outputOnly'/>
+            <field name='projectionMode' type='SFString' accessType='inputOnly'/>
+            <field name='internalAngle' type='SFFloat' accessType='inputOutput'/>
+            <field name='sideLength' type='SFFloat' accessType='inputOutput'/>
+            <field name='showIncircle' type='SFBool' accessType='inputOutput'/>
+            <field name='force' type='MFVec3f' accessType='outputOnly'/>
+        </ExternProtoDeclare>
+        <ExternProtoDeclare name='ContactPointNormalizer'
+            url='urn:vesc:app.data/prototypes/ContactPointNormalizerProto.x3d#ContactPointNormalizer'>
+            <field name='geometry' type='SFNode' accessType='inputOutput'/>
+            <field name='normalizedContactPoint' type='MFVec3f' accessType='outputOnly'/>
+            <field name='showBoundingBox' type='SFBool' accessType='inputOutput'/>
+            <field name='boundingBoxColor' type='SFColor' accessType='inputOutput'/>
+            <field name='planeColor' type='SFColor' accessType='inputOutput'/>
+        </ExternProtoDeclare>
+
+        <ToggleGroup DEF="ProtoTri01-toggle" hapticsOn='true' graphicsOn='true'>
+            <Transform DEF="ProtoTri01-transform" rotation='0 0 1 1.57079632679'><!-- -pi/2 about +z axis --> 
+                <ProtoInstance DEF='ProtoTri01' name="ProtoTri_CH">
+                    <fieldValue name='internalAngle' value='1.25663706144'/>
+                    <fieldValue name='sideLength' value='0.08'/>
+					<fieldValue name='showIncircle' value='false'/>
+                </ProtoInstance>
+            </Transform>
+    	</ToggleGroup>
+        <ToggleGroup DEF="ProtoTri02-toggle">
+            <Transform DEF="ProtoTri02-transform" rotation='0 0 1 2.82743338823'><!-- pi/2 + 2pi/5 -->
+                <ProtoInstance DEF='ProtoTri02' name="ProtoTri_CH">
+                    <fieldValue name='internalAngle' value='1.25663706144'/>
+                    <fieldValue name='sideLength' value='0.08'/>
+					<fieldValue name='showIncircle' value='false'/>
+                </ProtoInstance>
+            </Transform>
+        </ToggleGroup>
+        <ToggleGroup DEF="ProtoTri03-toggle">
+            <Transform DEF="ProtoTri03-transform" rotation='0 0 1 4.08407044967'><!-- pi/2 + 4pi/5 -->
+                <ProtoInstance DEF='ProtoTri03' name="ProtoTri_CH">
+                    <fieldValue name='internalAngle' value='1.25663706144'/>
+                    <fieldValue name='sideLength' value='0.08'/>
+					<fieldValue name='showIncircle' value='false'/>
+                </ProtoInstance>
+            </Transform>
+    	</ToggleGroup>
+        <ToggleGroup DEF="ProtoTri04-toggle">
+            <Transform DEF="ProtoTri04-transform" rotation='0 0 1 5.3407075111'><!-- pi/2 + 6pi/5 -->
+                <ProtoInstance DEF='ProtoTri04' name="ProtoTri_CH">
+                    <fieldValue name='internalAngle' value='1.25663706144'/>
+                    <fieldValue name='sideLength' value='0.08'/>
+					<fieldValue name='showIncircle' value='false'/>
+                </ProtoInstance>
+            </Transform>
+        </ToggleGroup>
+        <ToggleGroup DEF="ProtoTri05-toggle">
+            <Transform DEF="ProtoTri05-transform" rotation='0 0 1 6.59734457254'><!-- pi/2 + 8pi/5 -->
+                <ProtoInstance DEF='ProtoTri05' name="ProtoTri_CH">
+                    <fieldValue name='internalAngle' value='1.25663706144'/>
+                    <fieldValue name='sideLength' value='0.08'/>
+					<fieldValue name='showIncircle' value='false'/>
+                </ProtoInstance>
+            </Transform>
+        </ToggleGroup>
+		</Transform>
+		
+        <Transform translation='0.1 0.1 0' rotation='0 1 0 1.571'>
+            <Shape>
+                <Appearance>
+                    <Material diffuseColor='1 0 0'/>
+                    <SmoothSurface stiffness='1.0'/>
+                </Appearance>
+                <Sphere DEF='sphere_right' radius='0.04'/>
+            </Shape>
+            <ProtoInstance DEF='cpn_sphere_right' name='ContactPointNormalizer'>
+                <fieldValue name='geometry'>
+                    <Sphere USE='sphere_right'/>
+                </fieldValue>
+                <fieldValue name='showBoundingBox' value='true'/>
+            </ProtoInstance>
+        </Transform>
+        <Transform translation='-0.1 0.1 0' rotation='0 1 0 1.571'>
+            <Shape>
+                <Appearance>
+                    <Material diffuseColor='0 0 1'/>
+                    <SmoothSurface stiffness='1.0'/>
+                </Appearance>
+                <Sphere DEF='sphere_left' radius='0.04'/>
+            </Shape>
+            <ProtoInstance DEF='cpn_sphere_left' name='ContactPointNormalizer'>
+                <fieldValue name='geometry'>
+                    <Sphere USE='sphere_left'/>
+                </fieldValue>
+                <fieldValue name='showBoundingBox' value='true'/>
+            </ProtoInstance>
+        </Transform>
+        <ExternProtoDeclare name='StylusAngleTool'
+            url='urn:vesc:app.data/prototypes/StylusAngleToolProto.x3d#StylusAngleTool'>
+            <field name='shape' type='SFNode' accessType='inputOnly'/>
+            <field name='angleFromSurfaceNormal' type='SFFloat' accessType='outputOnly'/>
+            <field name='angleAboutSurfaceNormal' type='SFFloat' accessType='outputOnly'/>
+            <field name='angleFromOrientationAtTouch' type='SFFloat' accessType='outputOnly'/>
+        </ExternProtoDeclare>
+		
+        <!-- Bottom surface for Stylus Angle Demo -->
+        <Transform DEF='StylusAngleSurface1-transform' size='0.01 0.01 0.01' translation='-0.09 -0.0538 0.02' rotation="1.0 0.0 0.0 -1.15">
+            <Group>
+                <ProtoInstance name='StylusAngleTool' DEF='StylusAngleSurface1'>
+                    <fieldValue name='shape'>
+                        <Shape>
+                            <Appearance>
+                                <Material DEF="StylusAngleSurface1-material" diffuseColor="0.5 0.0 0.5" emissiveColor="0.0 0.0 0.5" ambientIntensity="0.167" shininess="2.098" transparency="0.25"/>
+                                <SmoothSurface stiffness='1.0'/>
+                            </Appearance>
+                            <Rectangle2D DEF='StylusAngleSurfaceBox1' solid='true' size='0.08 0.05'/>
+                        </Shape>
+                    </fieldValue>
+                </ProtoInstance>
+            </Group>
+        </Transform>
+        <Transform DEF='StylusAngleSurface2-transform' size='0.01 0.01 0.01' translation='0. -0.0538 0.02' rotation="1.0 0.0 0.0 -1.15">
+            <Group>
+                <ProtoInstance name='StylusAngleTool' DEF='StylusAngleSurface2'>
+                    <fieldValue name='shape'>
+                        <Shape>
+                            <Appearance>
+                                <Material DEF="StylusAngleSurface2-material" diffuseColor="0.5 0.0 0.5" emissiveColor="0.0 0.0 0.5" ambientIntensity="0.167" shininess="2.098" transparency="0.25"/>
+                                <SmoothSurface stiffness='1.0'/>
+                            </Appearance>
+                            <Rectangle2D DEF='StylusAngleSurfaceBox2' solid='true' size='0.08 0.05'/>
+                        </Shape>
+                    </fieldValue>
+                </ProtoInstance>
+            </Group>
+        </Transform>
+        <Transform DEF='StylusAngleSurface3-transform' size='0.01 0.01 0.01' translation='0.09 -0.0538 0.02' rotation="1.0 0.0 0.0 -1.15">
+            <Group>
+                <ProtoInstance name='StylusAngleTool' DEF='StylusAngleSurface3'>
+                    <fieldValue name='shape'>
+                        <Shape>
+                            <Appearance>
+                                <Material DEF="StylusAngleSurface3-material" diffuseColor="0.5 0.0 0.5" emissiveColor="0.0 0.0 0.5" ambientIntensity="0.167" shininess="2.098" transparency="0.25"/>
+                                <SmoothSurface stiffness='1.0'/>
+                            </Appearance>
+                            <Rectangle2D DEF='StylusAngleSurfaceBox3' solid='true' size='0.08 0.05'/>
+                        </Shape>
+                    </fieldValue>
+                </ProtoInstance>
+            </Group>
+        </Transform>
+
+    </Scene>
+</X3D>

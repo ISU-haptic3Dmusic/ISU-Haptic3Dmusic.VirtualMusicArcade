@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<X3D profile='Immersive' version='3.2'>
+    <Scene>
+        <ExternProtoDeclare name='ProtoTri' url='ProtoTri.x3d#ProtoTri'>
+            <field name='normalizedProjections' type='SFVec3f' accessType='outputOnly'/>
+            <field name='projectionMode' type='SFString' accessType='inputOnly'/>
+            <field name='internalAngle' type='SFFloat' accessType='inputOutput'/>
+            <field name='sideLength' type='SFFloat' accessType='inputOutput'/>
+            <field name='showIncircle' type='SFBool' accessType='inputOutput'/>
+            <field name='contactForce' type='MFVec3f' accessType='outputOnly'/>
+        </ExternProtoDeclare>
+        <ExternProtoDeclare name='ContactPointNormalizer'
+            url='urn:vesc:app.data/prototypes/ContactPointNormalizerProto.x3d#ContactPointNormalizer'>
+            <field name='geometry' type='SFNode' accessType='inputOutput'/>
+            <field name='normalizedContactPoint' type='MFVec3f' accessType='outputOnly'/>
+            <field name='showBoundingBox' type='SFBool' accessType='inputOutput'/>
+            <field name='boundingBoxColor' type='SFColor' accessType='inputOutput'/>
+            <field name='planeColor' type='SFColor' accessType='inputOutput'/>
+        </ExternProtoDeclare>
+   	    <IMPORT inlineDEF='VESC_EXPORTS' exportedDEF='WORKING_VOLUME' AS='wv'/>
+    	<IMPORT inlineDEF='H3D_EXPORTS' exportedDEF='HDEV' AS='hdev'/>
+        <ToggleGroup DEF="ProtoTri01-toggle" hapticsOn='true' graphicsOn='true'>
+            <Transform DEF="ProtoTri01-transform" rotation='0 0 1 1.57079632679'><!-- -pi/2 about +z axis --> 
+                <ProtoInstance DEF='ProtoTri01' name="ProtoTri">
+                    <fieldValue name='internalAngle' value='1.25663706144'/>
+                    <fieldValue name='sideLength' value='0.1'/>
+                </ProtoInstance>
+            </Transform>
+    	</ToggleGroup>
+        <ToggleGroup DEF="ProtoTri02-toggle">
+            <Transform DEF="ProtoTri02-transform" rotation='0 0 1 2.82743338823'><!-- pi/2 + 2pi/5 -->
+                <ProtoInstance DEF='ProtoTri02' name="ProtoTri">
+                    <fieldValue name='internalAngle' value='1.25663706144'/>
+                    <fieldValue name='sideLength' value='0.1'/>
+                </ProtoInstance>
+            </Transform>
+        </ToggleGroup>
+        <ToggleGroup DEF="ProtoTri03-toggle">
+            <Transform DEF="ProtoTri03-transform" rotation='0 0 1 4.08407044967'><!-- pi/2 + 4pi/5 -->
+                <ProtoInstance DEF='ProtoTri03' name="ProtoTri">
+                    <fieldValue name='internalAngle' value='1.25663706144'/>
+                    <fieldValue name='sideLength' value='0.1'/>
+                </ProtoInstance>
+            </Transform>
+    	</ToggleGroup>
+        <ToggleGroup DEF="ProtoTri04-toggle">
+            <Transform DEF="ProtoTri04-transform" rotation='0 0 1 5.3407075111'><!-- pi/2 + 6pi/5 -->
+                <ProtoInstance DEF='ProtoTri04' name="ProtoTri">
+                    <fieldValue name='internalAngle' value='1.25663706144'/>
+                    <fieldValue name='sideLength' value='0.1'/>
+                </ProtoInstance>
+            </Transform>
+        </ToggleGroup>
+        <ToggleGroup DEF="ProtoTri05-toggle">
+            <Transform DEF="ProtoTri05-transform" rotation='0 0 1 6.59734457254'><!-- pi/2 + 8pi/5 -->
+                <ProtoInstance DEF='ProtoTri05' name="ProtoTri">
+                    <fieldValue name='internalAngle' value='1.25663706144'/>
+                    <fieldValue name='sideLength' value='0.1'/>
+                </ProtoInstance>
+            </Transform>
+        </ToggleGroup>
+        <Transform translation='0.1 0.1 0'>
+            <Shape>
+                <Appearance>
+                    <Material diffuseColor='1 0 0'/>
+                    <SmoothSurface stiffness='1.0'/>
+                </Appearance>
+                <Sphere DEF='sphere_right' radius='0.04'/>
+            </Shape>
+            <ProtoInstance DEF='cpn_sphere_right' name='ContactPointNormalizer'>
+                <fieldValue name='geometry'>
+                    <Sphere USE='sphere_right'/>
+                </fieldValue>
+                <fieldValue name='showBoundingBox' value='true'/>
+            </ProtoInstance>
+        </Transform>
+        <Transform translation='-0.1 0.1 0'>
+            <Shape>
+                <Appearance>
+                    <Material diffuseColor='0 0 1'/>
+                    <SmoothSurface stiffness='1.0'/>
+                </Appearance>
+                <Sphere DEF='sphere_left' radius='0.04'/>
+            </Shape>
+            <ProtoInstance DEF='cpn_sphere_left' name='ContactPointNormalizer'>
+                <fieldValue name='geometry'>
+                    <Sphere USE='sphere_left'/>
+                </fieldValue>
+                <fieldValue name='showBoundingBox' value='true'/>
+            </ProtoInstance>
+        </Transform>
+    </Scene>
+</X3D>

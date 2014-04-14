@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<X3D profile='Immersive' version='3.2'>
+    <Scene>
+        <ExternProtoDeclare name='StylusAngleTool'
+            url='urn:vesc:app.data/prototypes/StylusAngleToolProto.x3d#StylusAngleTool'>
+            <field name='shape' type='SFNode' accessType='inputOnly'/>
+            <field name='angleFromSurfaceNormal' type='SFFloat' accessType='outputOnly'/>
+            <field name='angleAboutSurfaceNormal' type='SFFloat' accessType='outputOnly'/>
+            <field name='angleFromOrientationAtTouch' type='SFFloat' accessType='outputOnly'/>
+        </ExternProtoDeclare>
+		<Transform DEF='StylusAngleSurface-transform' translation='0 0 0'>
+			<Group>
+				<ProtoInstance name='StylusAngleTool' DEF='StylusAngleSurface'>
+					<fieldValue name='shape'>
+						<Shape>
+							<Appearance>
+								<Material DEF="StylusAngleSurface-material" diffuseColor="0.5 0.0 0.5" specularColor="0.0 0.0 0.0" emissiveColor="0.0 0.0 0.5" ambientIntensity="0.167" shininess="2.098" transparency="0.25"/>
+								<SmoothSurface stiffness='1.0'/>
+							</Appearance>
+							<Box DEF='StylusAngleSurfaceBox' size='0.2 0.001 0.1'/>
+						</Shape>
+					</fieldValue>
+				</ProtoInstance>
+			</Group>
+			</Transform>
+    </Scene>
+</X3D>

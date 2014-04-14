@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<X3D profile='Immersive' version='3.2'>
+<Scene>
+
+<ExternProtoDeclare name='SphereColorPhasor'
+	url='CH_ExternalPrototypeLibraryExperiment.x3d#SphereColorPhasor'>
+		<field name="ProtoCycleInterval" type="SFTime" accessType="inputOutput"/>
+		<field name="ProtoRadius" type="SFFloat" accessType="initializeOnly"/>
+		<field name="ProtoKey" type="MFFloat" accessType="inputOutput"/>
+		<field name="ProtoKeyValue" type="MFColor" accessType="inputOutput"/>
+</ExternProtoDeclare>
+    
+<Transform translation="-2 0 0">
+	<ProtoInstance name="SphereColorPhasor">
+		<fieldValue name="ProtoCycleInterval" value="12"/>
+		<fieldValue name="ProtoRadius" value="1.2"/>
+		<fieldValue name="ProtoKey" value="0 0.333 0.667 1"/>
+		<fieldValue name="ProtoKeyValue" value="1 0 0 0 0 1 0 1 0 1 0 0"/>
+	</ProtoInstance>
+</Transform>
+
+<Transform translation="0 2 0">
+	<ProtoInstance name="SphereColorPhasor">
+		<fieldValue name="ProtoCycleInterval" value="9"/>
+		<fieldValue name="ProtoRadius" value="0.9"/>
+		<fieldValue name="ProtoKey" value="0 0.333 0.667 1"/>
+		<fieldValue name="ProtoKeyValue" value="1 0 0 0 0 1 0 1 0 1 0 0"/>
+	</ProtoInstance>
+</Transform>
+
+<Transform translation="2 0 0">
+	<ProtoInstance name="SphereColorPhasor">
+		<fieldValue name="ProtoCycleInterval" value="6"/>
+		<fieldValue name="ProtoRadius" value="0.6"/>
+		<fieldValue name="ProtoKey" value="0 0.333 0.667 1"/>
+		<fieldValue name="ProtoKeyValue" value="1 0 0 0 0 1 0 1 0 1 0 0"/>
+	</ProtoInstance>
+</Transform>
+
+</Scene>
+</X3D>

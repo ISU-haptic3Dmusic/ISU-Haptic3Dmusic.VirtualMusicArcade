@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<X3D profile='Immersive' version='3.2'>
+    <Scene>
+        <ExternProtoDeclare name='ContactPointNormalizer'
+            url='urn:vesc:app.data/prototypes/ContactPointNormalizerProto.x3d#ContactPointNormalizer'>
+            <field name='geometry' type='SFNode' accessType='inputOutput'/>
+            <field name='normalizedContactPoint' type='MFVec3f' accessType='outputOnly'/>
+            <field name='showBoundingBox' type='SFBool' accessType='inputOutput'/>
+            <field name='boundingBoxColor' type='SFColor' accessType='inputOutput'/>
+            <field name='planeColor' type='SFColor' accessType='inputOutput'/>
+        </ExternProtoDeclare>
+        <Group>
+            <Transform translation='0.1 0 0'>
+                <Shape>
+                    <Appearance>
+                        <Material diffuseColor='1 0 0'/>
+                        <SmoothSurface DEF='smooth_surface' stiffness='1.0'/>
+                    </Appearance>
+                    <Sphere DEF='test_sphere' radius='0.06'/>
+                </Shape>
+                <ProtoInstance DEF='cpn_sphere' name='ContactPointNormalizer'>
+                    <fieldValue name='geometry'>
+                        <Sphere USE='test_sphere'/>
+                    </fieldValue>
+                    <fieldValue name='showBoundingBox' value='true'/>
+                </ProtoInstance>
+            </Transform>
+            <Transform translation='-0.1 0 0'>
+                <Shape>
+                    <Appearance>
+                        <Material diffuseColor='0 0 1'/>
+                        <SmoothSurface USE='smooth_surface'/>
+                    </Appearance>
+                    <Cone DEF='test_cone' bottomRadius='0.06' height='0.12'/>
+                </Shape>
+                <ProtoInstance DEF='cpn_cone' name='ContactPointNormalizer'>
+                    <fieldValue name='geometry'>
+                        <Cone USE='test_cone'/>
+                    </fieldValue>
+                    <fieldValue name='showBoundingBox' value='true'/>
+                </ProtoInstance> 
+            </Transform>
+        </Group>
+    </Scene>
+</X3D>
+

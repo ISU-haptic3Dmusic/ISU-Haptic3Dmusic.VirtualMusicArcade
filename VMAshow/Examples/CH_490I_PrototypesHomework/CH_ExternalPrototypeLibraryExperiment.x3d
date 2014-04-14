@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<X3D profile='Immersive' version='3.2'>
+  <head>
+    <meta name='title' content='CH_ExternProtoTypeLibraryExperiment.x3d'/>
+    <meta name='description' 
+    	content='Music 490I Fall 2012.
+    		(1) Test external prototype library file
+    		(2) will use to test extern prototype declare/instance' />
+    <meta name='author' content='CH'/>
+    <meta name='date' content='2012/09/09'/>
+  </head>
+
+<Scene>
+
+<ProtoDeclare name='SphereColorPhasor'>
+	<ProtoInterface>
+		<field name='ProtoCycleInterval' type='SFTime' accessType='inputOutput' value='5'/>
+		<field name='ProtoRadius' type='SFFloat' accessType='initializeOnly' value='1'/>
+		<field name='ProtoKey' type='MFFloat' accessType='inputOutput' value='0 0.333 0.667 1'/>
+		<field name='ProtoKeyValue' type='MFColor' accessType='inputOutput' value='0 0 0 0 0 0 0 0 0 0 0 0'/>
+	</ProtoInterface>
+	<ProtoBody>
+		<Shape>
+			<Appearance>
+				<Material DEF='M' diffuseColor="0 0 0"/>
+			</Appearance>
+			<Sphere>
+				<IS>
+					<connect nodeField='radius' protoField='ProtoRadius'/>
+				</IS>
+			</Sphere>
+		</Shape>
+	
+		<TimeSensor DEF='ColorChangeTimer' loop='true' enabled='true'>
+			<IS>
+				<connect nodeField='cycleInterval' protoField='ProtoCycleInterval'/>
+			</IS>
+		</TimeSensor>
+		<ColorInterpolator DEF='ColorInterpolator'>
+			<IS>
+				<connect nodeField='key' protoField='ProtoKey'/>
+				<connect nodeField='keyValue' protoField='ProtoKeyValue'/>
+			</IS>
+		</ColorInterpolator>
+	
+		<ROUTE fromNode='ColorChangeTimer' fromField='fraction_changed' toNode='ColorInterpolator' toField='set_fraction'/> 
+		<ROUTE fromNode='ColorInterpolator' fromField='value_changed' toNode='M' toField='diffuseColor'/>
+		
+	</ProtoBody>
+</ProtoDeclare> 
+
+</Scene>
+</X3D>

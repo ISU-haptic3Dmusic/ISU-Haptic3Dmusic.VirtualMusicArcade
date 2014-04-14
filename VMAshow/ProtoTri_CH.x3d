@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<X3D profile='Immersive' version='3.2'>
+    <Scene>
+        <ProtoDeclare name="ProtoTri">   
+            <ProtoInterface>
+                <!-- required to access I/O from fields -->
+                <field name='normalizedProjections' type='SFVec3f' accessType='outputOnly'/>
+                <!-- projectionMode: ORTHO, LATCHED, INCIRCLE -->
+                <field name='projectionMode' type='SFString' accessType='inputOnly' value='ORTHO'/>
+                <field name='internalAngle' type='SFFloat' accessType='inputOutput'/>
+                <field name='sideLength' type='SFFloat' accessType='inputOutput'/>
+                <field name='showIncircle' type='SFBool' accessType='inputOutput' value='true'/>
+                <field name='force' type='MFVec3f' accessType='outputOnly'/>
+                <field name='isTouched' type='MFBool' accessType='outputOnly'/>
+            </ProtoInterface>
+            <ProtoBody>
+                <Group>
+                    <Shape>
+                        <Appearance>
+                            <Material DEF='Tri-material'
+                                diffuseColor='1.00 1.00 1.00' specularColor='0.0 0.0 0.0'
+                                emissiveColor='0.0 0.0 0.0' ambientIntensity='0.167'
+                                shininess='1.098' transparency='0.0'/>
+                            <SmoothSurface stiffness='1.0'/>
+                        </Appearance>
+                        <IndexedFaceSet DEF='Tri'
+                            ccw='true' colorPerVertex='true' creaseAngle='0'
+                            convex='true' normalPerVertex='false' solid='false'
+                            colorIndex='0 1 2 -1'
+			                coordIndex='0 1 2 -1'>
+			                <IS>
+                                <connect nodeField='force' protoField='force'/>
+                                <connect nodeField='isTouched' protoField='isTouched'/>
+                            </IS>
+                            <Color DEF='Tri-color' color='1 0 0, 0 0 1, 1 1 1'/>
+                            <Coordinate DEF='Tri-coordinate' point='0 0 0, 0 0 0, 0 0 0'/>
+                            <HapticsOptions touchableFace='FRONT'/>
+                        </IndexedFaceSet>
+                    </Shape>
+                    <Shape>
+                        <IndexedLineSet colorPerVertex='true' coordIndex='0 1 2 0'>
+                            <Coordinate USE='Tri-coordinate' />
+                        </IndexedLineSet>
+                        <Appearance DEF='Tri-outline'>
+                            <Material emissiveColor=' 0 1 0' />
+                        </Appearance>
+                    </Shape>
+                    <Transform translation='0 0 .00001'>
+                        <!-- IndexedLineSet for the ortho projections -->
+                        <ToggleGroup DEF='ortho_proj_toggle' hapticsOn='false' graphicsOn='false'>
+                            <Shape>
+                                <IndexedLineSet coordIndex='0 1 -1 0 2 -1 0 3 -1'>
+                                    <Coordinate DEF='ortho_proj_line_coords' point='0 0 0, 0 0 0, 0 0 0, 0 0 0'/>
+                                </IndexedLineSet>
+                                <Appearance>
+                                    <Material emissiveColor='1 1 1'/>
+                                </Appearance>
+                            </Shape>
+                        </ToggleGroup>
+                        <!-- IndexedLineSet for the latched projections -->
+                        <ToggleGroup DEF='latched_proj_toggle' hapticsOn='false' graphicsOn='false'>
+                            <Shape>
+                                <IndexedLineSet coordIndex='0 1 -1 0 2 -1 0 3 -1'>
+                                    <Coordinate DEF='latched_proj_line_coords' point='0 0 0, 0 0 0, 0 0 0, 0 0 0'/>
+                                </IndexedLineSet>
+                                <Appearance>
+                                    <Material emissiveColor='1 1 1'/>
+                                </Appearance>
+                            </Shape>
+                        </ToggleGroup>
+                        <!-- IndexedLineSet for the incircle projection -->
+                        <ToggleGroup DEF='incircle_proj_toggle' hapticsOn='false' graphicsOn='false'>
+                            <Shape>
+                                <IndexedLineSet coordIndex='0 1 -1'>
+                                    <Coordinate DEF='incircle_proj_line_coords' point='0 0 0, 0 0 0'/>
+                                </IndexedLineSet>
+                                <Appearance>
+                                    <Material emissiveColor='1 1 1'/>
+                                </Appearance>
+                            </Shape>
+                        </ToggleGroup>
+                        <!-- incircle -->
+                        <ToggleGroup DEF='incircle_toggle' hapticsOn='false'>
+                            <IS>
+                                <connect nodeField='graphicsOn' protoField='showIncircle'/>
+                            </IS>
+                            <Transform DEF='Tri-incircle-transform'>
+                                <Shape>
+                                    <Appearance>
+                                        <Material emissiveColor='1 1 0'/>
+                                    </Appearance>
+                                    <Circle2D DEF='Tri-incircle'/>
+                                </Shape>
+                            </Transform>
+                        </ToggleGroup>
+                    </Transform>
+                    <ToggleGroup DEF='OutsideWall-Toggle' hapticsOn='false' graphicsOn='false'>
+                        <Shape>
+                            <Appearance>
+                                <Material DEF='OutsideWall-material'
+                                    diffuseColor='0.7 0.7 0.7'/>
+                                <SmoothSurface stiffness='1.0'/>
+                            </Appearance>
+                            <IndexedFaceSet DEF='OutsideWall'
+                                ccw='true' colorPerVertex='true' creaseAngle='0'
+                                convex='true' normalPerVertex='false' solid='false'
+                                coordIndex='0 1 4 3 -1 1 2 5 4 -1 2 0 3 5 -1'>
+                                <Coordinate DEF='OutsideWall-coordinate'
+                                    point='0 0 0, 0 0 0, 0 0 0, 0 0 0, 0 0 0, 0 0 0'/>
+                                <HapticsOptions touchableFace='FRONT_AND_BACK'/>
+                            </IndexedFaceSet>
+                        </Shape>
+                    </ToggleGroup>
+                    <PythonScript DEF='PT' url='ProtoTri.py'>
+                        <IndexedFaceSet USE='Tri' containerField='references'/>
+                        <Coordinate USE='Tri-coordinate' containerField='references'/>
+                        <Coordinate USE='ortho_proj_line_coords' containerField='references'/>
+                        <Coordinate USE='incircle_proj_line_coords' containerField='references'/>
+                        <Coorindate USE='OutsideWall-coordinate' containerField='references'/>
+                        <ToggleGroup USE='OutsideWall-Toggle' containerField='references'/>
+                        <Transform USE='Tri-incircle-transform' containerField='references'/>
+                        <Circle2D USE='Tri-incircle' containerField='references'/>
+                        <ToggleGroup USE='ortho_proj_toggle' containerField='references'/>
+                        <ToggleGroup USE='latched_proj_toggle' containerField='references'/>
+                        <ToggleGroup USE='incircle_proj_toggle' containerField='references'/>
+                        <IS>
+                            <connect nodeField='norm_projections' protoField='normalizedProjections'/>
+                            <connect nodeField='internalAngle' protoField='internalAngle'/>
+                            <connect nodeField='sideLength' protoField='sideLength'/>
+                            <connect nodeField='projection_mode' protoField='projectionMode'/>
+                        </IS>
+                    </PythonScript>
+                </Group>
+            </ProtoBody>
+        </ProtoDeclare>
+        <!-- Example usage -->
+        <!--
+        <ProtoInstance DEF='my_proto_tri' name='ProtoTri'>
+            <fieldValue name='internalAngle' value='0.3'/>
+            <fieldValue name='sideLength' value='0.1'/>
+        </ProtoInstance>
+        -->
+    </Scene>
+</X3D>
+

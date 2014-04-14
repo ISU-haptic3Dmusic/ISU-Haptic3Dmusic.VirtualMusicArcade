@@ -3,11 +3,12 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 5
+			"minor" : 1,
+			"revision" : 6,
+			"architecture" : "x86"
 		}
 ,
-		"rect" : [ -1921.0, 738.0, 670.0, 591.0 ],
+		"rect" : [ 19.0, 293.0, 622.0, 621.0 ],
 		"bgcolor" : [ 0.799789, 0.824373, 0.926578, 1.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -29,6 +30,36 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 14.0,
+					"id" : "obj-73",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1049.0, 361.0, 95.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 294.5, 460.0, 101.5, 20.0 ],
+					"text" : "192.168.0.6"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 14.0,
+					"id" : "obj-48",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 213.0, 902.5, 82.0, 22.0 ],
+					"text" : "loadmess 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"bgcolor" : [ 0.001809, 0.736468, 0.151554, 1.0 ],
 					"bgoncolor" : [ 0.802361, 0.0, 0.0, 1.0 ],
 					"bgovercolor" : [ 0.0352, 0.711449, 0.06401, 0.5 ],
@@ -43,7 +74,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 420.0, 902.5, 113.0, 21.0 ],
+					"patching_rect" : [ 315.5, 902.5, 113.0, 21.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 282.0, 160.5, 126.5, 21.0 ],
 					"text" : "Enable Haptics",
@@ -66,11 +97,12 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 6,
+							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 84.0, 213.0, 729.0, 878.0 ],
+						"rect" : [ 1750.0, 44.0, 729.0, 878.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 16.0,
@@ -122,7 +154,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 15.0, 82.171509, 32.5, 21.0 ],
+									"patching_rect" : [ 15.0, 82.171509, 32.5, 20.0 ],
 									"text" : "1"
 								}
 
@@ -136,7 +168,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 15.0, 46.995911, 182.0, 23.0 ],
+									"patching_rect" : [ 15.0, 46.995911, 182.0, 22.0 ],
 									"text" : "route /VESC/sceneDidLoad"
 								}
 
@@ -150,7 +182,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 15.0, 15.0, 60.0, 23.0 ],
+									"patching_rect" : [ 15.0, 15.0, 60.0, 22.0 ],
 									"text" : "r OSCin"
 								}
 
@@ -177,7 +209,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 47.245483, 195.828796, 495.0, 85.0 ],
+									"patching_rect" : [ 47.245483, 195.828796, 495.0, 83.0 ],
 									"text" : "/VESC/StylusAngleSurface*/angleFromSurfaceNormal/setAutoReport $1, /VESC/StylusAngleSurface*/angleFromOrientationAtTouch/setAutoReport $1, /VESC/StylusAngleSurface*/angleAboutSurfaceNormal/setAutoReport $1, /VESC/StylusAngleSurface*/isTouched/setAutoReport $1, /VESC/StylusAngleSurfaceBox*/force/setAutoReport $1"
 								}
 
@@ -204,7 +236,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 15.0, 349.082397, 696.0, 69.0 ],
+									"patching_rect" : [ 15.0, 349.082397, 696.0, 67.0 ],
 									"text" : "/VESC/ProtoTri0*/normalizedProjections/setAutoReport $1, /VESC/ProtoTri0*/force/setAutoReport $1, /VESC/ProtoTri*/isTouched/setAutoReport $1, /VESC/cpn_sphere_left/normalizedContactPoint/setAutoReport $1, /VESC/cpn_sphere_right/normalizedContactPoint/setAutoReport $1, /VESC/sphere_*/force/setAutoReport $1, /VESC/sphere_*/isTouched/setAutoReport $1"
 								}
 
@@ -231,7 +263,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 77.245483, 146.63562, 309.0, 37.0 ],
+									"patching_rect" : [ 77.245483, 146.63562, 309.0, 36.0 ],
 									"text" : "/VESC/hdev/mainButton/setAutoReport $1, /VESC/hdev/secondaryButton/setAutoReport $1"
 								}
 
@@ -245,7 +277,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 112.833252, 555.330078, 132.0, 21.0 ],
+									"patching_rect" : [ 112.833252, 555.330078, 132.0, 20.0 ],
 									"text" : "/VESC/queryNodes"
 								}
 
@@ -258,7 +290,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 15.0, 555.330078, 71.0, 23.0 ],
+									"patching_rect" : [ 15.0, 555.330078, 71.0, 22.0 ],
 									"text" : "s OSCout"
 								}
 
@@ -409,24 +441,23 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [  ]
+ ]
 					}
 ,
 					"patching_rect" : [ 213.0, 944.0, 86.0, 18.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 282.0, 183.0, 126.5, 18.0 ],
 					"saved_object_attributes" : 					{
-						"fontface" : 0,
-						"fontsize" : 16.0,
-						"digest" : "",
+						"default_fontface" : 0,
 						"default_fontname" : "Arial",
 						"default_fontsize" : 16.0,
-						"globalpatchername" : "",
 						"description" : "",
+						"digest" : "",
+						"fontface" : 0,
 						"fontname" : "Arial",
-						"tags" : "",
-						"default_fontface" : 0
+						"fontsize" : 16.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p VMAhapticsInit",
@@ -439,6 +470,7 @@
 					"bgcolor" : [ 0.917647, 0.894118, 1.0, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 14.0,
+					"frgb" : 0.0,
 					"id" : "obj-89",
 					"keymode" : 1,
 					"maxclass" : "textedit",
@@ -446,9 +478,9 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1020.0, 466.0, 102.0, 23.0 ],
+					"patching_rect" : [ 1020.0, 437.0, 102.0, 23.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 523.0, 460.0, 54.5, 23.0 ],
+					"presentation_rect" : [ 465.0, 460.0, 54.5, 23.0 ],
 					"text" : "7001"
 				}
 
@@ -462,23 +494,10 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1134.0, 535.5, 50.0, 21.0 ],
+					"patching_rect" : [ 1073.5, 500.0, 50.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 527.5, 460.0, 50.0, 20.0 ],
 					"text" : "7001"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 14.0,
-					"id" : "obj-71",
-					"linecount" : 3,
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1214.5, 393.0, 50.0, 53.0 ],
-					"text" : "text 192.168.0.3"
 				}
 
 			}
@@ -491,7 +510,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 44.0, 850.0, 60.0, 23.0 ],
+					"patching_rect" : [ 44.0, 850.0, 60.0, 22.0 ],
 					"text" : "pcontrol"
 				}
 
@@ -505,7 +524,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 44.0, 823.0, 42.0, 21.0 ],
+					"patching_rect" : [ 44.0, 823.0, 42.0, 20.0 ],
 					"text" : "open"
 				}
 
@@ -519,8 +538,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 432.0, 393.0, 341.0, 21.0 ],
-					"text" : "/VESC/StylusAngleSurfaceBox1/isTouched/value 0 0"
+					"patching_rect" : [ 286.75, 424.0, 653.0, 20.0 ],
+					"text" : "/VESC/sceneDidLoad C:/Users/Hopkins/Dropbox/VESC_DropboxShare/VMAshow/SEAMUSdemo5.x3d"
 				}
 
 			}
@@ -536,8 +555,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 6,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 322.0, 58.0, 708.0, 472.0 ],
@@ -575,33 +595,33 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 16.0,
+									"frgb" : 0.0,
 									"id" : "obj-2",
 									"linecount" : 19,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 8.0, 49.0, 632.0, 357.0 ],
+									"patching_rect" : [ 8.0, 49.0, 632.0, 346.0 ],
 									"text" : "List of wireless Send/Receive from OSCio patch\n\nSends\n    currentX3DsceneFile = name of file loaded by VESC (full path)\n    global_OSCin_asList = OSC in messages as separate symbols (Max list)\n    global_udpreceiveIn = OSC in messages (legacy)\n    OSCin = OSC in messages \n    OSCoutChangeTrigger = bang when either ip or port has been changed\n                                            (use to notify other patches this has happened)\n    sceneDidLoad = bang when VESC sends a sceneDidLoad message\n\nReceives\n    OSCout = use this to send into the OSCout pipeline \n                     (to use ip and port set in OSCio patch)\n\nInternals\n     OSCtesterSend = sends a /VESC/WorkingVolume/enabled/getValue message\n                                  to test OSC send and receive back\n     OSCout = used internally to send to OSC out pipeline"
 								}
 
 							}
  ],
-						"lines" : [  ],
-						"dependency_cache" : [  ]
+						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 44.0, 885.0, 68.0, 23.0 ],
+					"patching_rect" : [ 44.0, 885.0, 68.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"fontface" : 0,
-						"fontsize" : 14.0,
-						"digest" : "",
+						"default_fontface" : 0,
 						"default_fontname" : "Arial",
 						"default_fontsize" : 14.0,
-						"globalpatchername" : "",
 						"description" : "",
+						"digest" : "",
+						"fontface" : 0,
 						"fontname" : "Arial",
-						"tags" : "",
-						"default_fontface" : 0
+						"fontsize" : 14.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p GetInfo"
@@ -639,7 +659,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1739.5, 850.0, 32.5, 23.0 ],
+					"patching_rect" : [ 1739.5, 850.0, 32.5, 22.0 ],
 					"text" : "join"
 				}
 
@@ -648,14 +668,15 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 14.0,
+					"frgb" : 0.0,
 					"id" : "obj-61",
 					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1959.0, 765.0, 106.5, 55.0 ],
+					"patching_rect" : [ 1959.0, 765.0, 106.5, 53.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 294.5, 375.0, 241.0, 23.0 ],
+					"presentation_rect" : [ 294.5, 375.0, 241.0, 22.0 ],
 					"text" : "enable/disable AutoReport for above"
 				}
 
@@ -731,8 +752,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1483.5, 897.0, 275.0, 32.0 ],
-					"text" : "/VESC/HDEV/StylusAngleSurfaceBox/istouched/setAutoReport1 0"
+					"patching_rect" : [ 1483.5, 897.0, 275.0, 31.0 ],
+					"text" : "/VESC/HDEV/StylusAngleSurfaceBox/istouched/setAutoReport1 1"
 				}
 
 			}
@@ -740,14 +761,15 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 14.0,
+					"frgb" : 0.0,
 					"id" : "obj-14",
 					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1815.0, 559.0, 235.0, 55.0 ],
+					"patching_rect" : [ 1815.0, 559.0, 235.0, 53.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 26.0, 313.0, 555.5, 23.0 ],
+					"presentation_rect" : [ 26.0, 313.0, 555.5, 22.0 ],
 					"text" : "AutoReport (enter name of node/field then tab key to send enable/disable)"
 				}
 
@@ -784,6 +806,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 14.0,
+					"frgb" : 0.0,
 					"id" : "obj-20",
 					"linecount" : 4,
 					"maxclass" : "textedit",
@@ -810,86 +833,6 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1739.5, 710.0, 61.0, 20.0 ],
 					"text" : "route text"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 14.0,
-					"id" : "obj-140",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "bang", "int", "" ],
-					"patching_rect" : [ 1228.25, 284.0, 49.0, 23.0 ],
-					"text" : "t b 1 s"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bgcolor" : [ 0.768727, 0.777563, 0.777563, 1.0 ],
-					"bgoncolor" : [ 0.123873, 0.905486, 0.347759, 1.0 ],
-					"bgovercolor" : [ 0.867917, 0.880526, 0.890545, 1.0 ],
-					"fontname" : "Arial",
-					"fontsize" : 14.0,
-					"id" : "obj-139",
-					"maxclass" : "textbutton",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 1088.5, 254.0, 46.5, 19.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 306.5, 433.0, 63.0, 20.0 ],
-					"text" : "clearall",
-					"textoncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"textovercolor" : [ 0.0, 0.0, 0.0, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bgcolor" : [ 0.768727, 0.777563, 0.777563, 1.0 ],
-					"bgoncolor" : [ 0.123873, 0.905486, 0.347759, 1.0 ],
-					"bgovercolor" : [ 0.867917, 0.880526, 0.890545, 1.0 ],
-					"fontname" : "Arial",
-					"fontsize" : 14.0,
-					"id" : "obj-138",
-					"maxclass" : "textbutton",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 1214.5, 254.0, 46.5, 19.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 435.0, 433.0, 48.0, 20.0 ],
-					"text" : "read",
-					"textoncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"textovercolor" : [ 0.0, 0.0, 0.0, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bgcolor" : [ 0.768727, 0.777563, 0.777563, 1.0 ],
-					"bgoncolor" : [ 0.123873, 0.905486, 0.347759, 1.0 ],
-					"bgovercolor" : [ 0.867917, 0.880526, 0.890545, 1.0 ],
-					"fontname" : "Arial",
-					"fontsize" : 14.0,
-					"id" : "obj-137",
-					"maxclass" : "textbutton",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 1158.75, 254.0, 46.5, 19.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 378.5, 433.0, 48.0, 20.0 ],
-					"text" : "write",
-					"textoncolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"textovercolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
 			}
@@ -939,7 +882,10 @@
 			}
 , 			{
 				"box" : 				{
-					"bgoncolor" : [ 0.0, 0.744521, 0.000061, 1.0 ],
+					"bgcolor" : [ 0.126001, 0.692644, 0.14922, 1.0 ],
+					"bgoncolor" : [ 0.745098, 0.249706, 0.248253, 1.0 ],
+					"bgovercolor" : [ 0.155769, 0.64205, 0.142992, 0.58 ],
+					"bgoveroncolor" : [ 0.673994, 0.175889, 0.200087, 0.64 ],
 					"fontname" : "Arial",
 					"fontsize" : 14.0,
 					"id" : "obj-134",
@@ -952,8 +898,10 @@
 					"patching_rect" : [ 73.0, 602.0, 100.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 435.0, 54.0, 147.0, 20.0 ],
-					"text" : "Print to Max WIndow",
-					"texton" : "Print to Max Window"
+					"text" : "Enable Print OSC in",
+					"textcolor" : [ 1.0, 0.999974, 0.999991, 1.0 ],
+					"texton" : "Disable Print OSC in",
+					"textoveroncolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
 			}
@@ -1054,7 +1002,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 58.0, 132.0, 50.0, 21.0 ],
+					"patching_rect" : [ 58.0, 132.0, 50.0, 20.0 ],
 					"text" : "0"
 				}
 
@@ -1085,65 +1033,14 @@
 , 			{
 				"box" : 				{
 					"fontname" : "Arial",
-					"fontsize" : 14.0,
-					"id" : "obj-114",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "bang", "int" ],
-					"patching_rect" : [ 1020.0, 254.0, 38.0, 23.0 ],
-					"text" : "t b 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 14.0,
-					"id" : "obj-112",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 1020.0, 211.0, 324.0, 23.0 ],
-					"text" : "loadmess read VESCipLoader.maxpresets.maxpat"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"active1" : [ 0.081793, 1.0, 0.442274, 1.0 ],
-					"bgcolor" : [ 0.604719, 0.594194, 0.951376, 1.0 ],
-					"bubblesize" : 12,
-					"id" : "obj-50",
-					"maxclass" : "preset",
-					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "preset", "int", "preset", "int" ],
-					"patching_rect" : [ 1039.0, 300.0, 68.0, 22.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 173.0, 433.0, 117.0, 22.0 ],
-					"preset_data" : [ 						{
-							"number" : 1,
-							"data" : [ 5, "obj-89", "textedit", "set", 7001, 5, "obj-52", "textedit", "set", "192.168.0.3" ]
-						}
- ],
-					"spacing" : 6
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-69",
-					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1267.0, 1269.0, 292.5, 32.0 ],
-					"text" : "StylusAngleSurface1 angleFromOrientationAtTouch SFFloat OUTPUT_ONLY"
+					"patching_rect" : [ 1267.0, 1269.0, 522.5, 18.0 ],
+					"text" : "sceneDidLoad C: Users Hopkins Dropbox VESC_DropboxShare VMAshow SEAMUSdemo5.x3d"
 				}
 
 			}
@@ -1199,7 +1096,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1354.0, 1087.0, 108.0, 48.0 ],
+					"patching_rect" : [ 1354.0, 1087.0, 108.0, 47.0 ],
 					"text" : "match nn queryFieldsResult end"
 				}
 
@@ -1221,6 +1118,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-81",
+					"int" : 1,
 					"maxclass" : "gswitch",
 					"numinlets" : 3,
 					"numoutlets" : 1,
@@ -1240,7 +1138,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1233.0, 1087.0, 109.0, 48.0 ],
+					"patching_rect" : [ 1233.0, 1087.0, 109.0, 47.0 ],
 					"text" : "match nn queryFieldsResult begin"
 				}
 
@@ -1343,13 +1241,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-92",
-					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1239.0, 897.0, 196.0, 32.0 ],
-					"text" : "/VESC/StylusAngleSurface1/queryFields"
+					"patching_rect" : [ 1239.0, 897.0, 196.0, 18.0 ],
+					"text" : "/VESC/hdev/queryFields"
 				}
 
 			}
@@ -1357,14 +1254,15 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 14.0,
+					"frgb" : 0.0,
 					"id" : "obj-93",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1489.0, 559.0, 190.0, 39.0 ],
+					"patching_rect" : [ 1489.0, 559.0, 190.0, 38.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 26.0, 249.5, 405.0, 23.0 ],
+					"presentation_rect" : [ 26.0, 249.5, 405.0, 22.0 ],
 					"text" : "Fields Query (enter name of node then tab key)"
 				}
 
@@ -1401,6 +1299,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 14.0,
+					"frgb" : 0.0,
 					"id" : "obj-97",
 					"linecount" : 2,
 					"maxclass" : "textedit",
@@ -1412,7 +1311,7 @@
 					"presentation" : 1,
 					"presentation_linecount" : 2,
 					"presentation_rect" : [ 26.0, 272.5, 503.5, 29.0 ],
-					"text" : "StylusAngleSurface1\n\n"
+					"text" : "hdev\n\n"
 				}
 
 			}
@@ -1420,14 +1319,15 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 14.0,
+					"frgb" : 0.0,
 					"id" : "obj-98",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1191.0, 650.0, 143.0, 39.0 ],
+					"patching_rect" : [ 1191.0, 650.0, 143.0, 38.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 26.0, 183.0, 156.0, 23.0 ],
+					"presentation_rect" : [ 26.0, 183.0, 156.0, 22.0 ],
 					"text" : "send any full message"
 				}
 
@@ -1506,14 +1406,15 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 16.0,
+					"frgb" : 0.0,
 					"id" : "obj-105",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 862.0, 629.0, 115.0, 43.0 ],
+					"patching_rect" : [ 862.0, 629.0, 115.0, 42.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 26.0, 158.0, 238.0, 25.0 ],
+					"presentation_rect" : [ 26.0, 158.0, 238.0, 24.0 ],
 					"text" : "SEND OSC MESSAGES"
 				}
 
@@ -1522,6 +1423,7 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 14.0,
+					"frgb" : 0.0,
 					"id" : "obj-107",
 					"linecount" : 2,
 					"maxclass" : "textedit",
@@ -1543,7 +1445,6 @@
 					"grad1" : [ 0.87451, 0.894118, 0.964706, 1.0 ],
 					"grad2" : [ 0.580392, 0.580392, 0.94902, 1.0 ],
 					"id" : "obj-109",
-					"ignoreclick" : 1,
 					"maxclass" : "panel",
 					"mode" : 1,
 					"numinlets" : 1,
@@ -1566,7 +1467,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1034.0, 41.0, 69.0, 23.0 ],
+					"patching_rect" : [ 1034.0, 41.0, 69.0, 22.0 ],
 					"text" : "r OSCout"
 				}
 
@@ -1589,13 +1490,14 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 16.0,
+					"frgb" : 0.0,
 					"id" : "obj-40",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 789.5, 132.0, 84.0, 25.0 ],
+					"patching_rect" : [ 789.5, 132.0, 84.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 24.0, 433.0, 82.0, 25.0 ],
+					"presentation_rect" : [ 24.0, 433.0, 82.0, 24.0 ],
 					"text" : "OSC OUT"
 				}
 
@@ -1634,7 +1536,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1020.0, 369.0, 61.0, 20.0 ],
+					"patching_rect" : [ 1020.0, 312.0, 61.0, 20.0 ],
 					"text" : "route text"
 				}
 
@@ -1648,7 +1550,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1020.0, 498.0, 61.0, 20.0 ],
+					"patching_rect" : [ 1020.0, 469.0, 61.0, 20.0 ],
 					"text" : "route text"
 				}
 
@@ -1657,13 +1559,14 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 14.0,
+					"frgb" : 0.0,
 					"id" : "obj-47",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1122.0, 466.0, 45.0, 23.0 ],
+					"patching_rect" : [ 1122.0, 437.0, 45.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 489.5, 460.0, 40.0, 23.0 ],
+					"presentation_rect" : [ 425.0, 460.0, 40.0, 22.0 ],
 					"text" : "port "
 				}
 
@@ -1686,13 +1589,14 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 14.0,
+					"frgb" : 0.0,
 					"id" : "obj-51",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1138.0, 338.5, 43.0, 23.0 ],
+					"patching_rect" : [ 1309.0, 312.0, 43.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 134.0, 460.0, 39.0, 23.0 ],
+					"presentation_rect" : [ 134.0, 460.0, 39.0, 22.0 ],
 					"text" : "host "
 				}
 
@@ -1702,6 +1606,7 @@
 					"bgcolor" : [ 0.917647, 0.894118, 1.0, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 14.0,
+					"frgb" : 0.0,
 					"id" : "obj-52",
 					"keymode" : 1,
 					"maxclass" : "textedit",
@@ -1709,10 +1614,10 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1020.0, 338.5, 102.0, 23.0 ],
+					"patching_rect" : [ 1020.0, 261.0, 102.0, 23.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 173.0, 460.0, 310.0, 23.0 ],
-					"text" : "192.168.0.3",
+					"presentation_rect" : [ 173.0, 460.0, 118.0, 23.0 ],
+					"text" : "192.168.0.6",
 					"wordwrap" : 0
 				}
 
@@ -1735,12 +1640,13 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"frgb" : 0.0,
 					"id" : "obj-54",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 867.0, 51.0, 129.0, 34.0 ],
+					"patching_rect" : [ 867.0, 51.0, 129.0, 33.0 ],
 					"text" : "OSC Messages in (already formatted)"
 				}
 
@@ -1835,8 +1741,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1002.0, 562.0, 133.0, 20.0 ],
-					"text" : "udpsend 10.0.1.3 7001"
+					"patching_rect" : [ 1002.0, 562.0, 153.0, 20.0 ],
+					"text" : "udpsend 192.168.0.7 7001"
 				}
 
 			}
@@ -1864,10 +1770,10 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1263.0, 177.0, 483.0, 21.0 ],
+					"patching_rect" : [ 1263.0, 177.0, 483.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 24.0, 487.0, 553.5, 21.0 ],
-					"text" : "/VESC/HDEV/mainButton/getValue"
+					"presentation_rect" : [ 24.0, 487.0, 553.5, 20.0 ],
+					"text" : "/VESC/queryNodes"
 				}
 
 			}
@@ -1878,7 +1784,6 @@
 					"grad1" : [ 0.87451, 0.894118, 0.964706, 1.0 ],
 					"grad2" : [ 0.580392, 0.580392, 0.94902, 1.0 ],
 					"id" : "obj-66",
-					"ignoreclick" : 1,
 					"maxclass" : "panel",
 					"mode" : 1,
 					"numinlets" : 1,
@@ -1899,7 +1804,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 315.5, 372.0, 63.0, 23.0 ],
+					"patching_rect" : [ 315.5, 372.0, 63.0, 22.0 ],
 					"text" : "s OSCin"
 				}
 
@@ -2047,13 +1952,14 @@
 					"bubbleside" : 3,
 					"fontname" : "Arial",
 					"fontsize" : 14.0,
+					"frgb" : 0.0,
 					"id" : "obj-26",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 618.0, 106.0, 45.0, 23.0 ],
+					"patching_rect" : [ 618.0, 106.0, 45.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 497.5, 24.0, 38.0, 23.0 ],
+					"presentation_rect" : [ 497.5, 24.0, 38.0, 22.0 ],
 					"text" : "port "
 				}
 
@@ -2063,6 +1969,7 @@
 					"bgcolor" : [ 0.917647, 0.894118, 1.0, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 14.0,
+					"frgb" : 0.0,
 					"id" : "obj-28",
 					"keymode" : 1,
 					"maxclass" : "textedit",
@@ -2109,7 +2016,6 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-22",
-					"int" : 1,
 					"maxclass" : "gswitch2",
 					"numinlets" : 2,
 					"numoutlets" : 2,
@@ -2136,13 +2042,14 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 14.0,
+					"frgb" : 0.0,
 					"id" : "obj-25",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 211.0, 642.0, 65.0, 23.0 ],
+					"patching_rect" : [ 211.0, 642.0, 65.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 341.0, 54.0, 55.0, 23.0 ],
+					"presentation_rect" : [ 341.0, 54.0, 55.0, 22.0 ],
 					"text" : "retured"
 				}
 
@@ -2189,8 +2096,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 5
+							"minor" : 1,
+							"revision" : 6,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 1349.0, 74.0, 809.0, 312.0 ],
@@ -2216,13 +2124,28 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"id" : "obj-10",
+									"id" : "obj-7",
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 438.0, 56.0, 545.0, 18.0 ],
-									"text" : "/VESC/StylusAngleSurfaceBox1/isTouched/value 0 0"
+									"patching_rect" : [ 18.0, 100.0, 160.0, 18.0 ],
+									"text" : "/VESC/wv/enabled/getValue"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-10",
+									"linecount" : 2,
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 438.0, 56.0, 545.0, 31.0 ],
+									"text" : "/VESC/sceneDidLoad C:/Users/Hopkins/Dropbox/VESC_DropboxShare/VMAshow/SEAMUSdemo5.x3d"
 								}
 
 							}
@@ -2235,8 +2158,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 420.0, 100.0, 232.0, 20.0 ],
-									"text" : "match /VESC/HDEV/mainButton/value nn"
+									"patching_rect" : [ 420.0, 100.0, 195.0, 20.0 ],
+									"text" : "match /VESC/wv/enabled/value nn"
 								}
 
 							}
@@ -2256,12 +2179,13 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
+									"frgb" : 0.0,
 									"id" : "obj-3",
 									"linecount" : 4,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 463.0, 204.0, 319.0, 62.0 ],
+									"patching_rect" : [ 463.0, 204.0, 319.0, 60.0 ],
 									"text" : "If VESC is open and IP and port are correctly set, the response to the .../getValue message sent out from this patch should return here and cause a  toggle connetect to this outlet to flash its background color"
 								}
 
@@ -2334,12 +2258,13 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
+									"frgb" : 0.0,
 									"id" : "obj-4",
 									"linecount" : 3,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 57.0, 8.5, 313.0, 48.0 ],
+									"patching_rect" : [ 57.0, 8.5, 313.0, 47.0 ],
 									"text" : "a bang connected to this inlet sends the subsequent test message through \"OSCtesterOut\" globally placed send object to VESS_OSCout abstraction in the mother patch"
 								}
 
@@ -2352,7 +2277,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 18.0, 108.0, 104.0, 20.0 ],
+									"patching_rect" : [ 18.0, 161.0, 104.0, 20.0 ],
 									"text" : "s OSCtesterSend"
 								}
 
@@ -2369,24 +2294,10 @@
 								}
 
 							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-14",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 18.0, 82.0, 197.0, 18.0 ],
-									"text" : "/VESC/HDEV/mainButton/getValue"
-								}
-
-							}
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
-									"destination" : [ "obj-14", 0 ],
+									"destination" : [ "obj-7", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-1", 0 ]
@@ -2433,15 +2344,6 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-2", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-14", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-10", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -2470,6 +2372,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-2", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-7", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-9", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -2477,22 +2388,21 @@
 								}
 
 							}
- ],
-						"dependency_cache" : [  ]
+ ]
 					}
 ,
 					"patching_rect" : [ 184.0, 615.0, 82.0, 20.0 ],
 					"saved_object_attributes" : 					{
-						"fontface" : 0,
-						"fontsize" : 12.0,
-						"digest" : "",
+						"default_fontface" : 0,
 						"default_fontname" : "Arial",
 						"default_fontsize" : 12.0,
-						"globalpatchername" : "",
 						"description" : "",
+						"digest" : "",
+						"fontface" : 0,
 						"fontname" : "Arial",
-						"tags" : "",
-						"default_fontface" : 0
+						"fontsize" : 12.0,
+						"globalpatchername" : "",
+						"tags" : ""
 					}
 ,
 					"text" : "p OSCtester"
@@ -2515,13 +2425,14 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 16.0,
+					"frgb" : 0.0,
 					"id" : "obj-7",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 67.0, 180.5, 72.0, 25.0 ],
+					"patching_rect" : [ 67.0, 180.5, 72.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 24.0, 24.0, 69.0, 25.0 ],
+					"presentation_rect" : [ 24.0, 24.0, 69.0, 24.0 ],
 					"text" : "OSC IN"
 				}
 
@@ -2557,14 +2468,16 @@
 					"fontsize" : 14.0,
 					"gradient" : 1,
 					"id" : "obj-15",
+					"linecount" : 3,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 329.5, 562.0, 416.0, 21.0 ],
+					"patching_rect" : [ 329.5, 562.0, 416.0, 51.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 24.0, 81.0, 558.0, 21.0 ],
-					"text" : "/VESC/StylusAngleSurfaceBox1/isTouched/value 0 0"
+					"presentation_linecount" : 2,
+					"presentation_rect" : [ 24.0, 81.0, 558.0, 36.0 ],
+					"text" : "/VESC/sceneDidLoad C:/Users/Hopkins/Dropbox/VESC_DropboxShare/VMAshow/SEAMUSdemo5.x3d"
 				}
 
 			}
@@ -2603,7 +2516,6 @@
 					"grad1" : [ 0.87451, 0.894118, 0.964706, 1.0 ],
 					"grad2" : [ 0.580392, 0.580392, 0.94902, 1.0 ],
 					"id" : "obj-8",
-					"ignoreclick" : 1,
 					"maxclass" : "panel",
 					"mode" : 1,
 					"numinlets" : 1,
@@ -2686,43 +2598,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-11", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-114", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-112", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-50", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 1029.5, 244.0, 1071.0, 244.0, 1071.0, 281.0, 1048.5, 281.0 ],
-					"source" : [ "obj-112", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-50", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-114", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-52", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-114", 0 ]
 				}
 
 			}
@@ -2901,65 +2776,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-136", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-50", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 1182.0, 285.0, 1050.0, 285.0, 1050.0, 297.0, 1048.5, 297.0 ],
-					"source" : [ "obj-137", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-140", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-138", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-50", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 1111.75, 285.0, 1050.0, 285.0, 1050.0, 297.0, 1048.5, 297.0 ],
-					"source" : [ "obj-139", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-50", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 1267.75, 318.0, 1119.0, 318.0, 1119.0, 285.0, 1050.0, 285.0, 1050.0, 297.0, 1048.5, 297.0 ],
-					"source" : [ "obj-140", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-50", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 1252.75, 318.0, 1119.0, 318.0, 1119.0, 285.0, 1050.0, 285.0, 1050.0, 297.0, 1048.5, 297.0 ],
-					"source" : [ "obj-140", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-50", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 1237.75, 319.0, 1119.0, 319.0, 1119.0, 285.0, 1050.0, 285.0, 1050.0, 297.0, 1048.5, 297.0 ],
-					"source" : [ "obj-140", 0 ]
 				}
 
 			}
@@ -3153,7 +2969,7 @@
 					"destination" : [ "obj-41", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 1029.5, 389.0, 1200.5, 389.0 ],
+					"midpoints" : [ 1029.5, 348.0, 1200.5, 348.0 ],
 					"source" : [ "obj-43", 0 ]
 				}
 
@@ -3163,6 +2979,16 @@
 					"destination" : [ "obj-53", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"source" : [ "obj-43", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-73", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 1029.5, 348.0, 1134.5, 348.0 ],
 					"source" : [ "obj-43", 0 ]
 				}
 
@@ -3216,6 +3042,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-23", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-48", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-60", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -3236,35 +3071,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-52", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-50", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-89", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 1048.5, 332.0, 1130.0, 332.0, 1130.0, 428.0, 1029.5, 428.0 ],
-					"source" : [ "obj-50", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-43", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-52", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-71", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-52", 0 ]
@@ -3409,6 +3216,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-68", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-53", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-73", 0 ]
 				}
 
 			}
@@ -3565,6 +3381,15 @@
 					"hidden" : 0,
 					"midpoints" : [ 829.5, 871.0, 1011.5, 871.0 ],
 					"source" : [ "obj-87", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-49", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-88", 0 ]
 				}
 
 			}

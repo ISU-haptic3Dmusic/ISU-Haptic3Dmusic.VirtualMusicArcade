@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<X3D profile='Immersive' version='3.2'>
+    <Scene>
+        <IMPORT inlineDEF='VESC_EXPORTS' exportedDEF='WORKING_VOLUME' AS='wv'/>
+    	<IMPORT inlineDEF='H3D_EXPORTS' exportedDEF='HDEV' AS='hdev'/>
+		
+
+        <ExternProtoDeclare name='ProtoTri_CH' url='ProtoTri_CH.x3d#ProtoTri'>
+            <field name='normalizedProjections' type='SFVec3f' accessType='outputOnly'/>
+            <field name='projectionMode' type='SFString' accessType='inputOnly'/>
+            <field name='internalAngle' type='SFFloat' accessType='inputOutput'/>
+            <field name='sideLength' type='SFFloat' accessType='inputOutput'/>
+            <field name='showIncircle' type='SFBool' accessType='inputOutput'/>
+            <field name='force' type='MFVec3f' accessType='outputOnly'/>
+        </ExternProtoDeclare>
+
+
+        <ToggleGroup DEF="ProtoTri01-toggle" hapticsOn='true' graphicsOn='true'>
+            <Transform DEF="ProtoTri01-transform" rotation='0 0 1 0'>
+                <ProtoInstance DEF='ProtoTri01' name="ProtoTri_CH">
+                    <fieldValue name='internalAngle' value='1.25663706144'/>
+                    <fieldValue name='sideLength' value='0.08'/>
+                    <fieldValue name='showIncircle' value='false'/>
+                </ProtoInstance>
+            </Transform>
+    	</ToggleGroup>
+
+    </Scene>
+</X3D>
